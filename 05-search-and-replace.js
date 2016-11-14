@@ -7,12 +7,12 @@ NOTE: Preserve the case of the original word when you are replacing it. For exam
 the word "Book" with the word "dog", it should be replaced as "Dog" */
 
 function myReplace(str, before, after) {
-	var regEx = new RegExp(before, 'i'); 
+	var regEx = new RegExp(before, 'i');
 	var startingIndex = str.match(regEx).index;
-	if (str[startingIndex] = str[startingIndex].toUpperCase()) { 
-		after = after.charAt(0).toUpperCase() + after.slice(1); 
+	if (str[startingIndex] == str[startingIndex].toUpperCase()) {
+		after = after.charAt(0).toUpperCase() + after.slice(1);
 	}
-	return str.replace(before, after)
+	return str.replace(before, after);
 }
 
 console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"));

@@ -8,9 +8,9 @@ The unique numbers should be sorted by their original order, but the final array
 numerical order. */
 
 function uniteUnique(arr1, arr2, arr3) {
-	var unitedArr = []
-	for (i = 0; i < arguments.length; i++) { 
-		for (j = 0; j < arguments[i].length; j++) { 
+	var unitedArr = [];
+	for (var i = 0; i < arguments.length; i++) { 
+		for (var j = 0; j < arguments[i].length; j++) { 
 			if (unitedArr.indexOf(arguments[i][j]) < 0) { 
 				unitedArr.push(arguments[i][j]);
 			}

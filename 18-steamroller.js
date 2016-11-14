@@ -1,19 +1,19 @@
 // Flatten a nested array. You must account for varying levels of nesting.
 
 function steamrollArray(arr) {
-	flattened = []; 
+	var flattened = []; 
 	function flatten(elem) { 
 		if (!Array.isArray(elem)) { 
 			flattened.push(elem);
 		} else { 
-			for (i = 0; i < elem.length; i++) { 
-				flatten(elem[i])
+			for (var i = 0; i < elem.length; i++) { 
+				flatten(elem[i]);
 			}
 		}
 	
 	}	
 	arr.forEach(flatten); 
-	return flattened;n
+	return flattened;
 }
 
-console.log(steamrollArray([[[3,1]], 1, [[2, 1]]]))
+console.log(steamrollArray([[[3,1]], 1, [[2, 1]]]));

@@ -8,19 +8,19 @@ The provided number may not be a prime. */
 
 function sumPrimes(num) {
 	var primes = [];
-	for (i = 2; i <= num; i++) { 
+	for (var i = 2; i <= num; i++) {
 		var count = 0;
-		for (j = 2; j < i; j++) { 
-			if (i % j === 0) { 
+		for (var j = 2; j < i; j++) {
+			if (i % j === 0) {
 				count += 1;
 			}
 		}
-		if (count === 0) { 
-				primes.push(i);
+		if (count === 0) {
+			primes.push(i);
 		}
-	} 
-	return primes.reduce(function(a, b) { 
-		return a + b; 
+	}
+	return primes.reduce(function(a, b) {
+		return a + b;
 	});
 }
 

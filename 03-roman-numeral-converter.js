@@ -54,7 +54,7 @@ function convertToRoman(num) {
 
     var romanDigits = [];
     romanDigits.push(romanThousands, romanHundreds, romanTens, romanOnes);
-    romanNumeral = romanDigits.filter(function(n) {
+    var romanNumeral = romanDigits.filter(function(n) {
         return n !== undefined;
     });
     return romanNumeral.join('');

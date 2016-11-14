@@ -9,19 +9,29 @@ n as the second argument. */
 
 function whereAreYou(collection, source) {
 	var outputArr = [];
-	for (i = 0; i < collection.length; i++) { 
+	for (var i = 0; i < collection.length; i++) {
 		var propCount = 0;
-		for (var prop in source) { 
+		for (var prop in source) {
 			if (collection[i].hasOwnProperty(prop) && collection[i][prop] === source[prop]) {
 				propCount += 1;
-			} 
-		} 
-		if (propCount === Object.keys(source).length) { 
-		  	outputArr.push(collection[i]);
-		 }
+			}
+		}
+		if (propCount === Object.keys(source).length) {
+			outputArr.push(collection[i]);
+		}
 	}
 	return outputArr;
 }
 
-console.log(whereAreYou([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, 
-	{ first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+console.log(whereAreYou([{
+	first: "Romeo",
+	last: "Montague"
+}, {
+	first: "Mercutio",
+	last: null
+}, {
+	first: "Tybalt",
+	last: "Capulet"
+}], {
+	last: "Capulet"
+}));

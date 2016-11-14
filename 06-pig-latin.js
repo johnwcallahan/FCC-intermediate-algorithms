@@ -6,14 +6,15 @@ and suffixes an "ay".
 If a word begins with a vowel you just add "way" to the end. */
 
 function translatePigLatin(str) {
+	var vowelIndex;
 	var vowels = ['a', 'e', 'i', 'o', 'u'];
-    for (i = 0; i < str.length; i++) { 
-		if (vowels.indexOf(str[i]) >= 0) { 
-			var vowelIndex = i; 
-			break; 
-		}  
+	for (var i = 0; i < str.length; i++) {
+		if (vowels.indexOf(str[i]) >= 0) {
+			vowelIndex = i;
+			break;
+		}
 	}
-	if (vowelIndex === 0) { 
+	if (vowelIndex === 0) {
 		return str + 'way';
 	}
 	var firstPart = str.substr(vowelIndex);

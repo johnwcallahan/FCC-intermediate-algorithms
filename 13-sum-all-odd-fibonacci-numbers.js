@@ -8,8 +8,8 @@ As an example, passing 4 to the function should return 5 because all the odd Fib
 are 1, 1, and 3. */
 
 function sumFibs(num) {
-	function getFibs(num, fibs) { 
-		if (fibs[fibs.length - 1] + fibs[fibs.length - 2] > num) { 
+	function getFibs(num, fibs) {
+		if (fibs[fibs.length - 1] + fibs[fibs.length - 2] > num) {
 			return fibs;
 		} else {
 			fibs.push(fibs[fibs.length - 1] + fibs[fibs.length - 2]);
@@ -19,13 +19,13 @@ function sumFibs(num) {
 	var fibs = [1, 1];
 	var allFibs = getFibs(num, fibs);
 	var oddFibs = [];
-	for (i = 0; i < allFibs.length; i++) { 
-		if (allFibs[i] % 2 !== 0) { 
+	for (var i = 0; i < allFibs.length; i++) {
+		if (allFibs[i] % 2 !== 0) {
 			oddFibs.push(allFibs[i]);
 		}
 	}
-	return oddFibs.reduce(function(a, b) { 
-		return a + b; 
+	return oddFibs.reduce(function(a, b) {
+		return a + b;
 	});
 }
 
